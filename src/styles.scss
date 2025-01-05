@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'SF-pro';
+    src: url(assets/fonts/sf-pro/SF-Pro-Rounded-Regular.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'SF-pro';
+    src: url(assets/fonts/sf-pro/SF-Pro-Rounded-Medium.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'SF-pro';
+    src: url(assets/fonts/sf-pro/SF-Pro-Rounded-Bold.otf);
+    font-weight: 700;
+}
