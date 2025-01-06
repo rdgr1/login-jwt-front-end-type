@@ -1,13 +1,21 @@
 <main>
-    <section>
-        <span><img src="/assets/imgs/png/GreenHub.png" alt=""></span>
-        <h1></h1>
-        <h2></h2>
+    <section class="form-section">
+        <img src="/assets/imgs/png/Logo.png"/>
+        <div class="title">
+        <h1>{{ title }}</h1>
+        <img src="/assets/imgs/png/heart.png" alt="">
+        </div>
+        <div class="headers">
+            <h2>{{ text }}</h2>
+            <h2>{{text2}}</h2>
+        </div>
+        <ng-content></ng-content>
         <a href=""></a>
-        <button></button>
-        <button></button>
+        <button class="btnPrimary">{{btnPrimary}}</button>
+        <div class="diviser"><div></div><span>or</span><div></div></div>
+        <button class="btnSecondary">{{btnSecondary}}</button>
     </section>
-    <section>
-        <img src="/assets/imgs/svg/Login Art.svg" alt="">
+    <section class="art-section">
+        <img src="/assets/imgs/png/art.png" alt="">
     </section>
 </main>
