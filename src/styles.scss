@@ -6,6 +6,9 @@
     --white:#FFFFFF;
     --grey:#7d7d7d;
     --light-grey:#c9c9c9;
+    --bg-input:#F7FBFF;
+    --border-input:#D4D7E3;
+    --font-input:#8897AD;
 }
 @font-face {
     font-family: 'SF-pro';
@@ -31,6 +34,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'SF-pro-normal'
 }
 html body{
     height: 100%;

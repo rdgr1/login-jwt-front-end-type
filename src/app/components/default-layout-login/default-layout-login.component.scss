@@ -2,7 +2,8 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 250px;
         section {
             height: 100%;
             display: flex;
@@ -34,11 +35,10 @@ main {
                 width: 180px;
             }
             button {
-                width:80%;
+                width:100%;
                 padding: 15px 30px;
-                font-family: 'SF-pro-normal';
                 font-weight: 600;
-                font-size: 22px;
+                font-size: 20px;
                 border-radius: 12px;
                 cursor: pointer;
                 &.btnPrimary{
@@ -64,7 +64,6 @@ main {
                 }
             }
             .headers h2{
-                font-family: 'SF-pro-normal';
                 font-weight: 500;
                 font-size: 20px;
             }

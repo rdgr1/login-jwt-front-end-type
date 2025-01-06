@@ -6,6 +6,22 @@
     btnSecondary="Sign up"
 >
 <form [formGroup]="loginForm">
-
+<div class="email-input"><app-primary-input 
+    [formGroup]="loginForm"
+    formName="email"
+    type="email"
+    label="Email"
+    placeholder="Your Email">
+    </app-primary-input></div>
+<div class="password-input">
+    <app-primary-input 
+[formGroup]="loginForm"
+formName="password"
+type="password"
+label="Password"
+placeholder="Your Password"
+>
+</app-primary-input>
+</div>
 </form>
 </app-default-layout-login>
