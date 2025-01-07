@@ -74,6 +74,9 @@ main {
         color: var(--orange);
         font-weight: 500;
       }
+      &:disabled{
+        opacity: 0.8;
+      }
     }
 
     .title {

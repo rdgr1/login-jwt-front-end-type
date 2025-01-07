@@ -17,7 +17,7 @@
       <a href="#" class="forgot-password">Forgot Password?</a>
   
       <!-- Botão de Login que dispara o evento de envio -->
-      <button type="button" class="btnPrimary" (click)="onSubmit()">{{ btnPrimary }}</button>
+      <button type="button" class="btnPrimary" (click)="onSubmit()" [disabled]="disablePrimaryBtn">{{ btnPrimary }}</button>
   
       <div class="diviser">
         <div></div>

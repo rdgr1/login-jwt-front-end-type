@@ -13,7 +13,7 @@ export class DefaultLayoutLoginComponent {
 @Input() text2: string = "";
 @Input() btnPrimary: string = "";
 @Input() btnSecondary: string = "";
-
+@Input() disablePrimaryBtn: boolean = true;
 @Output() formSubmit = new EventEmitter<void>();
 @Output() navigate = new EventEmitter<void>(); 
 onSubmit() {

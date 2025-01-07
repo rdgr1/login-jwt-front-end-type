@@ -6,6 +6,7 @@
   btnSecondary="Sign up"
   (formSubmit)="submit()"
   (navigate)="navigate()"
+  [disablePrimaryBtn]="!loginForm.valid"
 >
   <form [formGroup]="loginForm" (ngSubmit)="submit()">
     <div class="email-input">
