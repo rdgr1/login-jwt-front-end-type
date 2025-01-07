@@ -3,7 +3,7 @@
       <img src="/assets/imgs/png/Logo.png" />
       <div class="title">
         <h1>{{ title }}</h1>
-        <img src="/assets/imgs/png/heart.png" alt="" />
+        <img *ngIf="isLogin" src="/assets/imgs/png/heart.png" alt="" />
       </div>
       <div class="headers">
         <h2>{{ text }}</h2>
@@ -14,21 +14,23 @@
       <ng-content></ng-content>
   
       <!-- Link Forgot Password? -->
-      <a href="#" class="forgot-password">Forgot Password?</a>
+      <a *ngIf="isLogin" href="#" class="forgot-password">Forgot Password?</a>
   
       <!-- Botão de Login que dispara o evento de envio -->
       <button type="button" class="btnPrimary" (click)="onSubmit()" [disabled]="disablePrimaryBtn">{{ btnPrimary }}</button>
   
       <div class="diviser">
         <div></div>
-        <span>or</span>
+        <span *ngIf="isLogin" >or</span>
+        <span *ngIf="isSign" >after</span>
         <div></div>
       </div>
       <button class="btnSecondary"(click)="onNavigate()">{{ btnSecondary }}</button>
     </section>
   
     <section class="art-section">
-      <img src="/assets/imgs/png/art.png" alt="" />
+      <img *ngIf="isLogin" src="/assets/imgs/png/art.png" alt="" />
+      <img *ngIf="isSign"src="/assets/imgs/png/Art2.png" alt="" />
     </section>
   </main>
   

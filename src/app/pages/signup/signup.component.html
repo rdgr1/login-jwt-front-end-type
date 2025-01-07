@@ -1,0 +1,51 @@
+<app-default-layout-login
+  [isLogin]="false"
+  [isSign]="true"
+  title="Sign Up Your Account Now"
+  text="Your only limit is you. Push harder!"
+  text2="start managing your life fitness."
+  btnPrimary="Sign up"
+  btnSecondary="Login"
+  (formSubmit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!signupForm.valid"
+>
+  <form [formGroup]="signupForm" (ngSubmit)="submit()">
+    <div class="name-input">
+      <app-primary-input
+        formControlName="name"
+        inputName="name"
+        type="text"
+        label="Your name"
+        placeholder="Full Name"
+      ></app-primary-input>
+    </div>
+    <div class="email-input">
+      <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="Email"
+      ></app-primary-input>
+    </div>
+    <div class="password-input">
+      <app-primary-input
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Password"
+        placeholder="Your Password"
+      ></app-primary-input>
+    </div>
+    <div class="passwordConfirmed-input">
+      <app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirm Your Password"
+        placeholder="Your Password"
+      ></app-primary-input>
+    </div>
+  </form>
+</app-default-layout-login>
