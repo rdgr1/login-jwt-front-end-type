@@ -1,3 +1,4 @@
+@import  'ngx-toastr/toastr';
 :root{
     --red:#F20530;
     --orange:#eb6421;
@@ -35,7 +36,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'SF-pro-normal'
-}
+} 
 html body{
     height: 100%;
 }

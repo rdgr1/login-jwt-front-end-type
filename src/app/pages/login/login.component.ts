@@ -3,27 +3,35 @@ import { DefaultLayoutLoginComponent } from "../../components/default-layout-log
 import{FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms"
 import { PrimaryInputComponent } from "../../components/primary-input/primary-input.component";
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [DefaultLayoutLoginComponent, ReactiveFormsModule, PrimaryInputComponent],
+  providers: [LoginService],
   templateUrl: './login.component.html',
   styleUrls:[ './login.component.scss']
 })
 export class LoginComponent {
-  private router!: Router;
+  constructor(private router: Router, private loginService: LoginService,
+    private toastService: ToastrService
+  ){
+  }
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
   });
   submit() {
-    if (this.loginForm.valid) {
-      console.log('Form Data:', this.loginForm.value);
-    } else {
-      console.log('Formulário inválido!');
-    }
-  }
+        this.loginService
+        .login(this.loginForm.value.email!, this.loginForm.value.password!)
+        .subscribe({
+          next: () => this.toastService.success("Login Realizado!"),
+          error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde"),
+        });
+    }  
   navigate(){
-    console.log("Inscreva-se")
+    console.log('formSubmit event received!')
+    this.router.navigate(["signup"])
   }
 }

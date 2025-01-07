@@ -7,7 +7,7 @@
   (formSubmit)="submit()"
   (navigate)="navigate()"
 >
-  <form [formGroup]="loginForm">
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
     <div class="email-input">
       <app-primary-input
         formControlName="email"

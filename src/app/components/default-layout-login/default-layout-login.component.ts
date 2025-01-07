@@ -14,12 +14,13 @@ export class DefaultLayoutLoginComponent {
 @Input() btnPrimary: string = "";
 @Input() btnSecondary: string = "";
 
-@Output("submit") formSubmit = new EventEmitter<void>();
-@Output("navigate") onNavigate = new EventEmitter<void>(); 
+@Output() formSubmit = new EventEmitter<void>();
+@Output() navigate = new EventEmitter<void>(); 
 onSubmit() {
   this.formSubmit.emit();
 }
-navigate(){
-  this.onNavigate.emit();
+onNavigate(){
+  console.log('Sign Up buttom clicked!')
+  this.navigate.emit();
 }
 }
