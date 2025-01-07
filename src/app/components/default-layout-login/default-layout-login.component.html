@@ -1,21 +1,34 @@
 <main>
     <section class="form-section">
-        <img src="/assets/imgs/png/Logo.png"/>
-        <div class="title">
+      <img src="/assets/imgs/png/Logo.png" />
+      <div class="title">
         <h1>{{ title }}</h1>
-        <img src="/assets/imgs/png/heart.png" alt="">
-        </div>
-        <div class="headers">
-            <h2>{{ text }}</h2>
-            <h2>{{text2}}</h2>
-        </div>
-        <ng-content></ng-content>
-        <a href="">Forgot Password?</a>
-        <button class="btnPrimary">{{btnPrimary}}</button>
-        <div class="diviser"><div></div><span>or</span><div></div></div>
-        <button class="btnSecondary">{{btnSecondary}}</button>
+        <img src="/assets/imgs/png/heart.png" alt="" />
+      </div>
+      <div class="headers">
+        <h2>{{ text }}</h2>
+        <h2>{{ text2 }}</h2>
+      </div>
+  
+      <!-- Formulário renderizado via ng-content -->
+      <ng-content></ng-content>
+  
+      <!-- Link Forgot Password? -->
+      <a href="#" class="forgot-password">Forgot Password?</a>
+  
+      <!-- Botão de Login que dispara o evento de envio -->
+      <button type="button" class="btnPrimary" (click)="onSubmit()">{{ btnPrimary }}</button>
+  
+      <div class="diviser">
+        <div></div>
+        <span>or</span>
+        <div></div>
+      </div>
+      <button class="btnSecondary">{{ btnSecondary }}</button>
     </section>
+  
     <section class="art-section">
-        <img src="/assets/imgs/png/art.png" alt="">
+      <img src="/assets/imgs/png/art.png" alt="" />
     </section>
-</main>
+  </main>
+  

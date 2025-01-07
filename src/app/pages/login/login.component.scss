@@ -1,3 +1,16 @@
 form{
     width: 100%;
+    button {
+        width:100%;
+        padding: 15px 30px;
+        font-weight: 600;
+        font-size: 20px;
+        border-radius: 12px;
+        cursor: pointer;
+        &.btnPrimary{
+            border: none;
+            background-color: var(--orange);
+            color: var(--white);
+        }
+    }
 }

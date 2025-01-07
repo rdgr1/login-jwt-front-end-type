@@ -1,71 +1,107 @@
 main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 250px;
+
+  section {
+    height: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 250px;
-        section {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .form-section{
-            flex-direction:column;
-            padding: 0 35px;
-            gap: 30px;
-            .diviser{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-transform: uppercase;
-                font-size: 16px;
-                font-family: 'SF-pro';
-                font-weight: 600;
-                color: var(--light-grey);
-                gap: 10px;
-                div{
-                    min-width: 100px;
-                    width: 100%;
-                    height: 1.3px;
-                    background-color: var(--light-grey);
-                }
-            }
-            img{
-                width: 180px;
-            }
-            button {
-                width:100%;
-                padding: 15px 30px;
-                font-weight: 600;
-                font-size: 20px;
-                border-radius: 12px;
-                cursor: pointer;
-                &.btnPrimary{
-                    border: none;
-                    background-color: var(--orange);
-                    color: var(--white);
-                }
-                &.btnSecondary{
-                    border: 2px solid var(--orange);
-                    background-color: transparent;
-                    color: var(--orange);
-                    font-weight: 500;
-                }
-            }
-            .title{
-                display: flex;
-                font-family: 'SF-pro';
-                font-weight: 700;
-                font-size: 23px;
-                gap: 8px;
-                img{
-                    width: 44px;
-                }
-            }
-            .headers h2{
-                font-weight: 500;
-                font-size: 20px;
-            }
-        }
+    justify-content: center;
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .forgot-password {
+      align-self: flex-end;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: var(--orange);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    .btnPrimary {
+      width: 100%;
+      padding: 15px 30px;
+      font-weight: 600;
+      font-size: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      background-color: var(--orange);
+      color: #fff;
+      border: none;
+    }
+    .diviser {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-family: 'SF-pro';
+      font-weight: 600;
+      color: var(--light-grey);
+      gap: 10px;
+
+      div {
+        min-width: 100px;
+        width: 100%;
+        height: 1.3px;
+        background-color: var(--light-grey);
+      }
+    }
+
+    img {
+      width: 180px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px 30px;
+      font-weight: 600;
+      font-size: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+
+      &.btnSecondary {
+        border: 2px solid var(--orange);
+        background-color: transparent;
+        color: var(--orange);
+        font-weight: 500;
+      }
+    }
+
+    .title {
+      display: flex;
+      font-family: 'SF-pro';
+      font-weight: 700;
+      font-size: 23px;
+      gap: 8px;
+
+      img {
+        width: 44px;
+      }
+    }
+
+    .headers h2 {
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--dark-orange);
+    }
+  }
+
+  .art-section img {
+    padding: 20px;
+    margin-left: 100px;
+    width: 850px;
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

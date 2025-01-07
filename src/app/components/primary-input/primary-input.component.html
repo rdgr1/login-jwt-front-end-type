@@ -1,10 +1,11 @@
-<div class="input-wrapper" [formGroup]="formGroup">
-    <label [for]="formName">{{ label }}</label>
+<div class="input-wrapper">
+    <label [for]="inputName">{{ label }}</label>
     <div class="input-content">
         <input 
-        [attr.type]="type" 
-        [formControlName]="formName"
+        [type]="type" 
         [placeholder]="placeholder"
+        [value]="value"
+        (input)="onInput($event)"
         />
     </div>
 </div>
