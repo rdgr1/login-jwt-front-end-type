@@ -1,6 +1,6 @@
 .input-wrapper{
         label{
-        font-size: 18px;
+        font-size: 17px;
         color: var(--font-input);
         text-align:start;
         margin-bottom: 10px;
@@ -8,7 +8,7 @@
         input{
             width: 100%;
             border-radius: 12px;
-            font-size: 18px;
+            font-size: 16px;
             background-color: var(--bg-input);  
             border: 1px solid var(--border-input);
             color: var(--font-input);
@@ -20,4 +20,29 @@
                 border-color: var(--border-input);
             }
         }
+}
+@media (max-width: 1240px) {
+    .input-wrapper{
+        label{
+            font-size: 16px;
+            color: var(--font-input);
+            text-align:start;
+            margin-bottom: 10px;
+            }
+            input{
+                width: 100%;
+                border-radius: 12px;
+                font-size: 16px;
+                background-color: var(--bg-input);  
+                border: 1px solid var(--border-input);
+                color: var(--font-input);
+                padding: 14px 0 14px 14px;
+                text-align: start;
+                outline: none;
+                margin-bottom: 5px;
+                &:focus{
+                    border-color: var(--border-input);
+                }
+            }
+    }
 }

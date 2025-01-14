@@ -23,7 +23,6 @@ onSubmit() {
   this.formSubmit.emit();
 }
 onNavigate(){
-  console.log('Sign Up buttom clicked!')
   this.navigate.emit();
 }
 }

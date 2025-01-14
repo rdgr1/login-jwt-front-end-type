@@ -13,11 +13,12 @@
   <form [formGroup]="loginForm" (ngSubmit)="submit()">
     <div class="email-input">
       <app-primary-input
-        formControlName="email"
+      formControlName="email"
         inputName="email"
         type="email"
         label="Email"
         placeholder="Email"
+        autocomplete="email"
       ></app-primary-input>
     </div>
     <div class="password-input">
@@ -27,6 +28,7 @@
         type="password"
         label="Password"
         placeholder="Your Password"
+        autocomplete="current-password"
       ></app-primary-input>
     </div>
   </form>

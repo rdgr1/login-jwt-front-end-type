@@ -1,11 +1,14 @@
 <div class="input-wrapper">
     <label [for]="inputName">{{ label }}</label>
     <div class="input-content">
-        <input 
-        [type]="type" 
+      <input
+        [id]="inputName"
+        [type]="type"
         [placeholder]="placeholder"
         [value]="value"
+        [autocomplete]="autocomplete"
         (input)="onInput($event)"
-        />
+      />
     </div>
-</div>
+  </div>
+  
