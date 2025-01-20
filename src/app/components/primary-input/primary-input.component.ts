@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input  } from '@angular/core';
-import { ControlValueAccessor, FormGroup, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
+import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 type InputTypes = 'text' | 'email' | 'password'
 @Component({
   selector: 'app-primary-input',
@@ -21,7 +21,7 @@ export class PrimaryInputComponent implements ControlValueAccessor {
   @Input() label: string = "";
   @Input() inputName: string = "";
   @Input() autocomplete: string = "";
-
+  @Input() formControl: FormControl = new FormControl();
   value: string = ''
   onChange: any = () => {}
   onTouched: any= () => {}

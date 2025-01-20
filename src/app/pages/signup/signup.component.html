@@ -18,6 +18,9 @@
         type="text"
         label="Your name"
         placeholder="Full Name"
+        minlength="7"
+        autocomplete="name"
+        required
       ></app-primary-input>
     </div>
     <div class="email-input">
@@ -27,6 +30,8 @@
         type="email"
         label="Email"
         placeholder="Email"
+        required
+        autocomplete="email"
       ></app-primary-input>
     </div>
     <div class="password-input">
@@ -36,6 +41,8 @@
         type="password"
         label="Password"
         placeholder="Your Password"
+        required
+        autocomplete="current-password"
       ></app-primary-input>
     </div>
     <div class="passwordConfirmed-input">
@@ -45,7 +52,10 @@
         type="password"
         label="Confirm Your Password"
         placeholder="Your Password"
+        required
+        autocomplete="current-password"
       ></app-primary-input>
+      <p>Password Must be at least 6 characters</p>
     </div>
   </form>
 </app-default-layout-login>

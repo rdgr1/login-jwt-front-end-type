@@ -19,6 +19,21 @@
             &:focus{
                 border-color: var(--border-input);
             }
+            &:valid:not(:placeholder-shown), &:invalid:not(:placeholder-shown){
+                background-repeat: no-repeat;
+                background-size: 25px;
+                background-position: calc(100% - 10px);
+            }
+            &:invalid:not(:placeholder-shown){
+                border: 1px solid var(--red);
+                background-image: url(/assets/imgs/png/unchecked-mark.png);   
+            }
+            &:invalid:not(:placeholder-shown) + p{
+                color: var(--red);
+            }
+            &:valid:not(:placeholder-shown){
+                background-image: url(/assets/imgs/png/checked-mark.png);
+            }
         }
 }
 @media (max-width: 1240px) {
